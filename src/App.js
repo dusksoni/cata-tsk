@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import UserLayout from './layout/userLayouts/userLayout';
 import NotFound from './components/NotFound';
+import Loader from './components/Loader';
 
 const DragAndDropPage = React.lazy(() => import("./components/DragAndDropPage"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
@@ -16,7 +17,7 @@ function App() {
   return (
     <Router>
     <UserLayout>
-      <Suspense >
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Navigate replace to="/Upload" />} />
           <Route path={`/Upload`} element={<DragAndDropPage/>} />
