@@ -7,6 +7,7 @@ import {
   Routes,
 } from "react-router-dom";
 import UserLayout from './layout/userLayouts/userLayout';
+import NotFound from './components/NotFound';
 
 const DragAndDropPage = React.lazy(() => import("./components/DragAndDropPage"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
@@ -20,6 +21,9 @@ function App() {
           <Route path="/" element={<Navigate replace to="/Upload" />} />
           <Route path={`/Upload`} element={<DragAndDropPage/>} />
           <Route path={`/Dashboard`} element={<Dashboard/>} />
+          <Route path="*" element={<NotFound />}/>
+            
+         
         </Routes>
       </Suspense>
     </UserLayout>
