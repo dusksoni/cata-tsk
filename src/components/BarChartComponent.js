@@ -77,7 +77,7 @@ function BarChartComponent() {
               tickFormatter={(value) => `$${value}`}
             />
             <Tooltip />
-            <Bar dataKey="total" fill="#0B4A7B" radius={[4, 4, 0, 0]} barSize={30} />
+            <Bar dataKey="total" fill="#0B4A7B" radius={[4, 4, 0, 0]} barSize={window.innerWidth>1023 ? 50 : 10} />
           </BarChart>
         </ResponsiveContainer>
   )

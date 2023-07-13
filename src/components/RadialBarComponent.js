@@ -46,7 +46,7 @@ const data = [
   },
 ];
 const style = {
-    top: '50%',
+    top: window.innerWidth>1439? '50%' : "90%",
     right: 0,
     transform: 'translate(0, -50%)',
     lineHeight: '24px',
@@ -63,7 +63,7 @@ function RadialBarComponent() {
             dataKey="uv"
           />
           <Tooltip/>
-          <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style}/>
+          <Legend iconSize={10} layout={window.innerWidth>1439? "vertical" : "horizontal"} verticalAlign={window.innerWidth>1439? "middle" : "bottom"} wrapperStyle={style}/>
         </RadialBarChart>
       </ResponsiveContainer>
   )

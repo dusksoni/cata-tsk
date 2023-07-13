@@ -11,13 +11,13 @@ function Dashboard() {
   return (
     <div>
       <div className="p-5 grid grid-cols-2 gap-3">
-        <div className="min-h-[450px] md:col-span-1 col-span-2 bg-white p-8">
+        <div className="min-h-[450px] md:col-span-1 col-span-2 bg-white md:p-8 p-2">
           <RadialBarComponent />
         </div>
-        <div className="min-h-[450px] md:col-span-1 col-span-2 bg-white p-8">
+        <div className="min-h-[450px] md:col-span-1 col-span-2 bg-white md:p-8 p-2">
           <RadarChartComponent />
         </div>
-        <div className="w-full bg-white col-span-2 p-8">
+        <div className="w-full bg-white col-span-2 md:p-8 p-2">
           <BarChartComponent />
         </div>
 
